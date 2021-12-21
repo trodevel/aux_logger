@@ -9,7 +9,7 @@ def create_timed_rotating_logger( path, name ):
     handler = TimedRotatingFileHandler( path,
                                        when="h",
                                        interval=1,
-                                       backupCount=48 )
+                                       backupCount=336 )
 
     formatter = logging.Formatter( '%(asctime)s %(levelname)s - %(message)s' )
     handler.setFormatter( formatter )
